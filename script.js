@@ -201,7 +201,7 @@ function checarLocal() {
   const posMapa = getPosition(document.querySelector(".mapa"));
 
   const errorX = posBandeira.x - posMapa.x + 160;
-  const errorY = posBandeira.y - posMapa.y + 0;
+  const errorY = posBandeira.y - posMapa.y + 10;
   if (Math.abs(errorX) > 38 || Math.abs(errorY) > 30) {
     marker.textContent = "❌";
 
