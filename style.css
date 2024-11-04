@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  justify-items: center;
+
+  user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-width: 1440px;
+  justify-items: center;
+}
+
+body {
+  color: #222;
+  background-color: white;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", sans-serif;
+  /* background-color: #60b347; */
+}
+
+/* LAYOUT */
+img {
+  height: 170px;
+  margin-bottom: 5px;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 45px;
+}
+
+.jiggers {
+  font-size: 0.8em;
+  font-family: "DM Serif Text";
+  margin-bottom: 0.3em;
+}
+
+.quiz {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 1.5em;
+}
+
+.questao {
+  margin-top: 50px;
+  text-align: center;
+  justify-items: center;
+}
+
+.ligue {
+  display: none;
+}
+
+.ligue h2 {
+  margin-bottom: 30px;
+}
+
+.imagens {
+  display: flex;
+}
+
+.imgbox {
+  width: 140px;
+  display: grid;
+  justify-items: center;
+}
+
+.linha {
+  box-shadow: 8px 8px #aaa;
+  border: 1px solid #222;
+  width: 130px;
+  height: 40px;
+}
+
+.nomes {
+  padding-top: 40px;
+  justify-content: center;
+  width: 400px;
+  height: 100px;
+  display: flex;
+}
+
+.nome {
+  border: 1px solid #222;
+
+  background-color: white;
+  width: 12em;
+  padding: 0.7em;
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.bottom {
+  min-width: 1300px;
+  height: 100px;
+  justify-items: center;
+}
+
+.check {
+  box-shadow: 8px 8px #aaa;
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  position: absolute;
+  left: 40%;
+  width: 20%;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  user-select: none;
+}
+
+.q2 {
+  display: none;
+}
+
+.mapbox {
+  width: 1088px;
+  height: 420px;
+  margin-top: 30px;
+
+  position: relative;
+}
+
+.mapa {
+  box-shadow: 8px 8px #aaa;
+  height: 420px;
+  border: 1px solid #222;
+  margin: 0px;
+  z-index: -2;
+}
+
+.marker {
+  font-size: 25px;
+  position: absolute;
+  user-select: none;
+
+  display: none;
+  z-index: 3;
+}
+
+.certo {
+  display: none;
+  z-index: 20;
+  font-size: 30px;
+  position: absolute;
+}
+
+.confirm {
+  box-shadow: 8px 8px #aaa;
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  height: 61px;
+  border: 1px solid #222;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  margin: 0px;
+
+  color: grey;
+
+  width: 1088px;
+  position: absolute;
+  bottom: -0px;
+  right: 0px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.resposta {
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: white;
+  height: 61px;
+  border: 0px;
+  margin: 0px;
+
+  width: 0px;
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+
+  z-index: 25;
+
+  display: none;
+}
+
+.restart {
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  height: 61px;
+  border: 1px solid #222;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  margin: 0px;
+
+  width: 1088px;
+  position: absolute;
+  bottom: -20px;
+
+  z-index: 25;
+
+  display: none;
+}
+
+.problembox {
+  display: flex;
+}
+
+.problema1 {
+  height: 420px;
+  margin-right: 40px;
+  border: 1px solid #222;
+  box-shadow: 8px 8px #aaa;
+}
+
+.problema2 {
+  height: 186px;
+  margin: 0px;
+}
+
+.ansbox {
+  height: 246px;
+  border: 1px solid #222;
+  border-bottom: 0px;
+  margin-top: 90px;
+  margin-left: 40px;
+  box-shadow: 8px 8px #aaa;
+}
+
+.q3 {
+  display: none;
+}
+
+.q3 h2 {
+  margin-bottom: 30px;
+}
+
+.typebox {
+  display: flex;
+  justify-items: end;
+  justify-content: end;
+}
+
+.entrada {
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  padding: 1em;
+  border: 0px;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+
+  height: 60px;
+  width: 290px;
+  position: relative;
+  top: 0px;
+}
+
+.entrada::-webkit-outer-spin-button,
+.entrada::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.enternum {
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  padding: 1em;
+  border: 0px;
+  border-left: 1px solid #222;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+
+  color: grey;
+
+  width: 290px;
+  height: 60px;
+  position: relative;
+  top: 0px;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.q4 {
+  display: none;
+}
+
+.personbox {
+  display: flex;
+  
+}
+.q4 h2 {
+  margin-bottom: 20px;
+}
+
+.fci {
+  border: 1px solid #222;
+  height: 240px;
+  margin: 18px;
+
+  padding: 10px;
+
+  cursor: pointer;
+
+  box-shadow: 8px 8px #aaa;
+}
+
+.restartfc {
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  margin-top: 30px;
+
+  cursor: pointer;
+
+  width: 290px;
+  height: 60px;
+  position: relative;
+  top: 0px;
+
+  user-select: none;
+
+  box-shadow: 8px 8px #aaa;
+  display: none;
+}
+
+.startbtn {
+  box-shadow: 8px 8px #aaa;
+  font-family: inherit;
+  font-size: 3.5rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  margin-top: 170px;
+
+  cursor: pointer;
+
+  width: 490px;
+  height: 160px;
+  position: relative;
+  top: 0px;
+
+  user-select: none;
+}
+
+.q5 {
+  display: none;
+}
+
+.q5 h2 {
+  margin-bottom: 20px;
+}
+
+.aage {
+  border: 1px solid #222;
+  height: 120px;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+
+  box-shadow: 4px 4px #aaa;
+}
+
+.orderblock {
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 8px 8px #aaa;
+}
+
+.pl {
+  width: 136px;
+  height: 136px;
+  border: 1px solid #222;
+  border-right: 0px;
+}
+
+.p9 {
+  width: 136px;
+  height: 136px;
+  border: 1px solid #222;
+}
+
+.bottomblock {
+  display: flex;
+}
+
+.imgblock {
+  width: 670px;
+  height: 130px;
+}
+
+
+.orderbtn {
+  box-shadow: 8px 8px #aaa;
+  margin-left: 70px;
+  margin-top: 85px;
+
+  color: grey;
+
+  font-family: inherit;
+  font-size: 2rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  cursor: pointer;
+
+  width: 615px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+
+  user-select: none;
+}
+
+.q6 {
+  display: none;
+}
+
+.q6 h2 {
+  margin-bottom: 30px;
+}
+
+.videodogos {
+  border: 2px solid #222;
+  width: 237px;
+  box-shadow: 8px 8px #aaa;
+}
+
+.optbottom {
+  display: flex;
+}
+
+.optionbox {
+  display: block;
+}
+
+.option {
+  box-shadow: 8px 8px #aaa;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  cursor: pointer;
+
+  width: 500px;
+  height: 60px;
+
+  user-select: none;
+}
+
+.restartopt {
+  box-shadow: 8px 8px #aaa;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  display: none;
+
+  cursor: pointer;
+
+  width: 500px;
+  height: 80px;
+
+  user-select: none;
+}
+
+.fim {
+  display: none;
+}
+
+.fim h3 {
+  margin-top: 50px;
+  font-size: 2.2rem;
+}
+
+.logo2 {
+  border: 1px solid #222;
+  box-shadow: 8px 8px #aaa;
+  margin-top: 3em;
+  padding: 3em;
+  padding-top: 1em;
+}
+
+.jiggers2 {
+  margin-bottom: 0.2em;
+  font-size: 6rem;
+  font-family: "DM Serif Text";
+}
+
+.quiz2 {
+  font-size: 10rem;
+}
+
+.restartend {
+  box-shadow: 8px 8px #aaa;
+  margin-top: 40px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #222;
+
+  cursor: pointer;
+
+  width: 500px;
+  height: 80px;
+
+  user-select: none;
+}
+
+.timer1 {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+
+  padding: 15px;
+
+  border: 1px solid #222;
+  box-shadow: 4px 4px #aaa;
+}
+
+.timer2 {
+  display: flex;
+}
+
+.tdigit {
+  font-size: 20px;
+}
+
+.tdigit2 {
+  font-size: 28px;
+}
+
+.seutempo {
+  margin-bottom: 1em;
+}
+
+.showtime {
+  border: 1px solid #222;
+  box-shadow: 8px 8px #aaa;
+  display: grid;
+  justify-items: center;
+  padding: 2em;
+  margin-top: 30px;
+}
+
+.endbottom {
+  display: flex;
+}
+
+.endleft {
+  display: grid;
+  justify-items: right;
+}
+
+.dogospreto {
+  border: 1px solid #222;
+  box-shadow: 8px 8px #aaa;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 230px;
+}
