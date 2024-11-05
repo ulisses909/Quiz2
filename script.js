@@ -202,7 +202,7 @@ function checarLocal() {
 
   const errorX = posBandeira.x - posMapa.x + 160;
   const errorY = posBandeira.y - posMapa.y + 10;
-  if (Math.abs(errorX) > 38 || Math.abs(errorY) > 30) {
+  if (Math.abs(errorX) > 45 || Math.abs(errorY) > 45) {
     marker.textContent = "❌";
 
     let arrX = marker.style.left.split("");
